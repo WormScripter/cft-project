@@ -9,11 +9,12 @@ app.secret_key = "CHANGE_THIS_SECRET_KEY"
 
 def get_db():
     return psycopg2.connect(
-        host="db.qjcgllwdprmwyjuoydvq.supabase.co",
+        host="aws-1-ap-southeast-2.pooler.supabase.com",
         database="postgres",
         user="postgres",
         password="#HelloWorld809",
-        port="5432"
+        port="5432",
+        sslmode="require"
     )
 
 
